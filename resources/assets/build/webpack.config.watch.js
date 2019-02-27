@@ -16,6 +16,11 @@ if (url.parse(target).protocol === 'https:') {
 }
 
 module.exports = {
+  devServer: {
+    watchOptions: {
+      poll: true, // Enable polling to support docker containers
+    },
+  },
   output: {
     pathinfo: true,
     publicPath: config.proxyUrl + config.publicPath,

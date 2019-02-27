@@ -51,6 +51,13 @@ if (process.env.SAGE_DIST_PATH) {
 }
 
 /**
+ * Allow proxyUrl to be set using an environment variable
+ */
+if (process.env.PROXYURL) {
+  module.exports.proxyUrl = process.env.PROXYURL;
+}
+
+/**
  * If you don't know your publicPath at compile time, then uncomment the lines
  * below and use WordPress's wp_localize_script() to set SAGE_DIST_PATH global.
  * Example:

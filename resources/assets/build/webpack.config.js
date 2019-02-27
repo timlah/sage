@@ -181,7 +181,9 @@ let webpackConfig = {
       failOnError: !config.enabled.watcher,
       syntax: 'scss',
     }),
-    new FriendlyErrorsWebpackPlugin(),
+    new FriendlyErrorsWebpackPlugin({
+      clearConsole: false,
+    }),
   ],
 };
 
